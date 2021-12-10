@@ -8,7 +8,7 @@ public class Examen4 {
         try {
             RandomAccessFile f = new RandomAccessFile("empleados.dat","rw");
             long nregistros=f.length()/76;
-            f.seek(66);
+            f.seek(59);
             for(int i =0; i<nregistros;i++){
 
                 double sHro=f.readDouble();
@@ -28,7 +28,7 @@ public class Examen4 {
                 }
                 System.out.println(sueldo);
                 f.writeDouble(sueldo);
-                f.skipBytes(66);
+                f.skipBytes(59);
 
             }
             f.close();
